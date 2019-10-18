@@ -1,4 +1,4 @@
-var App = function () {
+function App() {
     console.log('App init');
 }
 
