@@ -1,0 +1,30 @@
+{
+  "name": "laboratory",
+  "version": "1.0.0",
+  "description": "laboratory tasks",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/RomanPushtuk/LabaPropertyCross.git"
+  },
+  "author": "Roman Pushtuk",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/RomanPushtuk/LabaPropertyCross/issues"
+  },
+  "homepage": "https://github.com/RomanPushtuk/LabaPropertyCross#readme",
+  "devDependencies": {
+    "babel-eslint": "^10.0.3",
+    "eslint": "^6.5.1",
+    "eslint-config-airbnb": "^18.0.1",
+    "eslint-plugin-import": "^2.18.2",
+    "eslint-plugin-jsx-a11y": "^6.2.3",
+    "eslint-plugin-prettier": "^3.1.1",
+    "eslint-plugin-react": "^7.16.0",
+    "webpack": "^4.41.2"
+  },
+  "dependencies": {}
+}
