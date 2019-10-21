@@ -3,9 +3,6 @@
   "version": "1.0.0",
   "description": "laboratory tasks",
   "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/RomanPushtuk/LabaPropertyCross.git"
@@ -17,7 +14,11 @@
   },
   "homepage": "https://github.com/RomanPushtuk/LabaPropertyCross#readme",
   "devDependencies": {
+    "@babel/core": "^7.6.4",
+    "@babel/preset-env": "^7.6.3",
+    "@babel/preset-react": "^7.6.3",
     "babel-eslint": "^10.0.3",
+    "babel-loader": "^8.0.6",
     "eslint": "^6.5.1",
     "eslint-config-airbnb": "^18.0.1",
     "eslint-config-prettier": "^6.4.0",
@@ -26,7 +27,23 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.18.2",
-    "webpack": "^4.41.2"
+    "react-hot-loader": "^4.12.15",
+    "webpack": "^4.41.2",
+    "webpack-cli": "^3.3.9",
+    "webpack-dev-server": "^3.8.2"
   },
-  "dependencies": {}
+  "dependencies": {
+    "react": "^16.10.2",
+    "react-dom": "^16.10.2"
+  },
+  "scripts": {
+    "start": "webpack-dev-server --open --watch",
+    "build": "webpack --mode production"
+  },
+  "babel": {
+    "presets": [
+      "@babel/env",
+      "@babel/react"
+    ]
+  }
 }

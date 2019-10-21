@@ -1,5 +1,5 @@
-function App() {
-    console.log('App init');
-}
+import React from 'react';
+import ReactDOM from 'react-dom';
+import App from './App';
 
-var app = new App();
+ReactDOM.render(<App />, document.getElementById('root'));
