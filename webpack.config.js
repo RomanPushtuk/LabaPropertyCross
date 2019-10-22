@@ -9,6 +9,7 @@ module.exports = {
     devServer: {
         contentBase: path.join(__dirname, 'dist'),
         port: 9000,
+        historyApiFallback: true,
     },
     mode: 'development',
     module: {
