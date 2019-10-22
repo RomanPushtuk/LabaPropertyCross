@@ -27,6 +27,7 @@
     "eslint-plugin-prettier": "^3.1.1",
     "eslint-plugin-react": "^7.16.0",
     "prettier": "^1.18.2",
+    "redux-devtools": "^3.5.0",
     "react-hot-loader": "^4.12.15",
     "webpack": "^4.41.2",
     "webpack-cli": "^3.3.9",
@@ -34,7 +35,10 @@
   },
   "dependencies": {
     "react": "^16.10.2",
-    "react-dom": "^16.10.2"
+    "react-dom": "^16.10.2",
+    "react-redux": "^7.1.1",
+    "redux": "^4.0.4",
+    "redux-devtools-extension": "^2.13.8"
   },
   "scripts": {
     "start": "webpack-dev-server --open --watch",
