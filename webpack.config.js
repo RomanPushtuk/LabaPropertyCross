@@ -19,6 +19,20 @@ module.exports = {
                 exclude: /node_modules/,
                 use: ['babel-loader'],
             },
+            {
+                test: /\.module\.css$/i,
+                use: [
+                    { loader: 'style-loader' },
+                    {
+                        loader: 'css-loader',
+                        options: {
+                            modules: true,
+                            importLoaders: 1,
+                        },
+                    },
+                    { loader: 'postcss-loader' },
+                ],
+            },
         ],
     },
     resolve: {
