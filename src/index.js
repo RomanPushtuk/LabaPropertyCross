@@ -2,15 +2,15 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import { Provider } from 'react-redux';
 import store from './redux/store/configStore';
-import { BrowserRouter } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 import MainPage from './pages/main/MainPage';
 import 'reset-css';
 
 ReactDOM.render(
-    <BrowserRouter>
+    <Router>
         <Provider store={store}>
             <MainPage />
         </Provider>
-    </BrowserRouter>,
+    </Router>,
     document.getElementById('root')
 );
