@@ -1,17 +1,8 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { path } from 'ramda';
+import { useParams } from 'react-router-dom';
 
-export default function Component3(props) {
-    const data = path(['match', 'params', 'data'], props);
+export default function Component3() {
+    const { data } = useParams();
 
     return <h2>Компонент3 {data}</h2>;
 }
-
-Component3.propTypes = {
-    match: PropTypes.shape({
-        params: PropTypes.shape({
-            data: PropTypes.string,
-        }),
-    }),
-};

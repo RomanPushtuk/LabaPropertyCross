@@ -1,13 +1,31 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
+import { NavLink } from 'react-router-dom';
+import { path } from 'ramda';
+
+import style from './HeaderComponent.css';
 
 export default function HeaderComponent() {
+    const checkCorrectLink = (match, location) => {
+        const url = path(['url'], match);
+        const pathname = path(['pathname'], location);
+
+        return url === pathname;
+    };
+
     return (
         <nav>
-            <Link to="/">Page1</Link>
-            <Link to="/page2">Page2</Link>
-            <Link to="/page3">Page3</Link>
-            <Link to="/page3/44">TestParams</Link>
+            <NavLink to="/" activeClassName={style.selected} isActive={checkCorrectLink}>
+                Page1
+            </NavLink>
+            <NavLink to="/page2" activeClassName={style.selected} isActive={checkCorrectLink}>
+                Page2
+            </NavLink>
+            <NavLink to="/page3" activeClassName={style.selected} isActive={checkCorrectLink}>
+                Page3
+            </NavLink>
+            <NavLink to="/page3/44" activeClassName={style.selected} isActive={checkCorrectLink}>
+                TestParams
+            </NavLink>
         </nav>
     );
 }

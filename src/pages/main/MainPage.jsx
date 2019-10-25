@@ -18,7 +18,7 @@ function MainPage(props) {
                 <Route path="/page2" component={Component2} />
                 <Route exact path="/page3" component={Component3} />
                 <Route path="/page3/:data" component={Component3} />
-                <Route exact path="*" component={Error} />
+                <Route path="*" component={Error} />
             </Switch>
         </>
     );
