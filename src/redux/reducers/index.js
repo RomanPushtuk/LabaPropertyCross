@@ -1,17 +1,11 @@
-import { ACTION } from '../../constants';
 import { combineReducers } from 'redux';
 
-function templateReducer(state = {}, action) {
-    switch (action.type) {
-        case ACTION:
-            return {
-                ...state,
-            };
-        default:
-            return state;
-    }
-}
+import recentSearchedAppartments from './recentSearchedAppartments';
+import geolocationSearchedAppartments from './geolocationSearchedAppartments';
 
-const rootReducer = combineReducers({ template: templateReducer });
+const rootReducer = combineReducers({
+    recentSearchedAppartments,
+    geolocationSearchedAppartments,
+});
 
 export default rootReducer;

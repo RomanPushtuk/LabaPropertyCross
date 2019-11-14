@@ -228,7 +228,7 @@ module.exports = {
         'import/default': 2,
         'import/order': 0, // ломает код :/
         'import/prefer-default-export': 1,
-        'import/newline-after-import': 0, // включить, как починят баг
+        'import/newline-after-import': 1, // включить, как починят баг
         'import/no-webpack-loader-syntax': 1,
         'import/first': 1,
         'import/no-dynamic-require': 1,

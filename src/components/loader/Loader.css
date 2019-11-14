@@ -1,0 +1,46 @@
+.containerLoader {
+    position: relative;
+    width: 33px;
+    height: 33px;
+    margin: auto;
+}
+
+.circle {
+    position: absolute;
+    width: 33px;
+    height: 33px;
+    border: 3px solid rgb(0, 0, 0);
+    border-radius: 33px;
+}
+
+.holder {
+    position: absolute;
+    width: 9px;
+    height: 33px;
+    left: 12px;
+    top: 0px;
+    animation-name: loading;
+    animation-duration: 0.775s;
+    animation-iteration-count: infinite;
+    animation-timing-function: linear;
+}
+
+.ball {
+    position: absolute;
+    left: 0px;
+    top: -8px;
+    width: 13px;
+    height: 13px;
+    background: rgb(0, 0, 0);
+    border-radius: 11px;
+}
+
+@keyframes loading {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
