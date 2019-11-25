@@ -25,7 +25,7 @@ function InputCityPure({
                 .then(() => fetchCityApartments(city))
                 .then(() => {
                     onChangeComponent('recentSearches');
-                    history.push('/listing');
+                    history.push(`/listing/${city}`);
                 })
                 .catch((error) => onShowError(error.message));
         },

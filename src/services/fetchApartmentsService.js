@@ -9,7 +9,7 @@ const INITIAL_PARAMS = {
     listing_type: 'buy',
 };
 
-export default function fetchApartments(params) {
+export default function fetchApartmentsService(params) {
     const queryParams = getQueryParams({ ...INITIAL_PARAMS, ...params });
 
     return fetch(`${BASE_URL}${queryParams}`)
