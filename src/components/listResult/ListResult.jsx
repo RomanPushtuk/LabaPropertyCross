@@ -11,12 +11,14 @@ export default function ListSearch({ list }) {
         <>
             <p className={style.info}>Recent searches</p>
             <div className={style.search}>
-                {list.map((apartments, index) => {
+                {list.map((apartment, index) => {
+                    const url = `/listing/:${apartment.city}`;
+
                     return (
                         <p key={index}>
-                            <Link to="/listing" className={style.resultSearch}>
+                            <Link to={url} className={style.resultSearch}>
                                 Search #{index + 1}
-                                <span className={style.status}>({apartments.totalPages || 'not found'})</span>
+                                <span className={style.status}>({apartment.totalPages || 'not found'})</span>
                             </Link>
                         </p>
                     );

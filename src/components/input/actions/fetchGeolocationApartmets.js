@@ -1,12 +1,12 @@
 import { path } from 'ramda';
 import getLocation from '../../../services/getLocation';
-import fetchApartments from '../../../services/fetchApartments';
+import fetchApartmentsService from '../../../services/fetchApartmentsService';
 import addGeolocationSearched from './addGeolocationSearched';
 
 export default function fetchGeolocationApartmets() {
     return (dispatch) => {
         return getLocation().then(({ latitude, longitude }) => {
-            return fetchApartments({
+            return fetchApartmentsService({
                 page: 1,
                 centre_point: `${latitude},${longitude}`,
             }).then((apartments) => {
